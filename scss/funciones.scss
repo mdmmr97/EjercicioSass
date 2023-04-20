@@ -1,0 +1,14 @@
+@mixin elementcolor ($color: white){
+    color: $color;
+}
+
+@mixin background ($color: black){
+    background-color: $color;
+}
+
+@mixin rlmargin_padding_width($margin:0, $padding:0, $width:0){
+    margin-left: $margin;
+    margin-right: $margin;
+    padding: $padding;
+    width: $width;
+}

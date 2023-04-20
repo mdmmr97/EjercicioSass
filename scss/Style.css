@@ -1,0 +1,77 @@
+body {
+  background-image: url(../resources/pradera.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+body h1 {
+  color: azure;
+  background-color: rgba(138, 155, 233, 0.6);
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body #kanban {
+  margin-inline: 10px;
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  background-color: rgba(240, 255, 255, 0.6);
+  border-radius: 15px;
+  margin-left: 9px;
+  margin-right: 9px;
+  padding: 0;
+  width: 19%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.column h2 {
+  margin: 20px;
+}
+
+.card {
+  margin: 20px;
+  background-color: rgb(228, 245, 245);
+  border-radius: 15px;
+  padding: 15px;
+  padding-bottom: 40px;
+}
+.card .close i {
+  float: right;
+  color: red;
+}
+.card:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+  color: white;
+}
+.card:hover .tag i {
+  color: black;
+}
+.card:hover .close i {
+  color: black;
+}
+
+.tag {
+  float: left;
+  padding: 2%;
+  border-radius: 50%;
+  margin: 5px;
+}
+.tag i {
+  color: whitesmoke;
+}
+.tag.front {
+  background-color: green;
+}
+.tag.back {
+  background-color: red;
+}
+.tag.device {
+  background-color: rgb(255, 217, 0);
+}/*# sourceMappingURL=Style.css.map */

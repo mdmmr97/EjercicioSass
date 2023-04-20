@@ -1,0 +1,84 @@
+@import 'funciones';
+@import 'variables';
+
+body {
+    background-image: url(../resources/pradera.jpg);
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: cover;
+
+    h1 {
+        color: azure;
+        @include background (rgba(138, 155, 233, 0.6));
+        border-radius: $radio_border;
+        @include rlmargin_padding_width(auto, 10px, fit-content);
+    }
+
+    #kanban {
+        margin-inline: 10px;
+        box-sizing: border-box;
+    }
+}
+
+.column {
+    float: left;
+    background-color: $color_column;
+    border-radius: $radio_border;
+    @include rlmargin_padding_width(9px, 0, 19%);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    h2 {
+        margin: 20px;
+    }
+}
+
+.card {
+    margin: 20px;
+    background-color: $color_card;
+    border-radius: $radio_border;
+    padding: 15px;
+    padding-bottom: 40px;
+
+    .close i{
+        float: right;
+        color: $color_close;
+    }
+
+    &:hover {
+        @include background(cadetblue);
+        cursor: pointer;
+        @include elementcolor;
+
+        .tag i {
+            @include elementcolor(black);
+        }
+
+        .close i{
+            @include elementcolor(black);
+        }
+    }
+}
+
+.tag {
+    float: left;
+    padding: 2%;
+    border-radius: 50%;
+    margin: 5px;
+    
+    i {
+        @include elementcolor($color_icons);
+    }
+    
+    &.front{
+        @include background($color_desktop);
+    }
+    
+    &.back{
+        @include background($color_cube);
+    }
+    
+    &.device{
+        @include background($color_mobile);
+    }
+}
